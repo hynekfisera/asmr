@@ -1,4 +1,10 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Interactive ASMR Experience",
+  description: 'Website inspired by "this or that" test from YouTube video by @TiptoeTingles and @GibiASMR. This website allows you to try this test out by yourself.',
+};
 
 export default function Home() {
   return (
@@ -21,9 +27,14 @@ export default function Home() {
           . This website allows you to try this test out by yourself.
         </p>
         <p className="text-gray-300 text-center text-sm sm:text-base">Two ASMR triggers will appear. Once you decide which one you like more, click on the button below the video. After you finish the test, you will be able to see your #1 trigger.</p>
-        <Link href="/preference" className="btn btn-primary">
-          Start preference test
-        </Link>
+        <div className="flex flex-wrap justify-center gap-2.5">
+          <Link href="/preference" className="btn btn-primary">
+            Start preference test
+          </Link>
+          <Link href="/preference/tutorial" className="btn btn-secondary">
+            Tutorial
+          </Link>
+        </div>
       </div>
     </main>
   );

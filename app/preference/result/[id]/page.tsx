@@ -36,12 +36,12 @@ export default function Result({ params }: { params: { id: string } }) {
               Watch the full video
             </Link>
             <Link href="/" className="btn btn-secondary">
-              Play again
+              Back to home
             </Link>
           </div>
         </div>
       )}
-      {!trigger && <h1>Invalid trigger id</h1>}
+      {!trigger && <h1 className="text-lg sm:text-xl md:text-2xl text-center text-gray-200">Invalid trigger id</h1>}
     </main>
   );
 }

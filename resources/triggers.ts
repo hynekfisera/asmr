@@ -48,7 +48,7 @@ const triggers: Trigger[] = [
     name: "Mic Brushing",
     url: "https://youtu.be/HUlpQaAnDd0",
     start: 1286,
-    end: 1312,
+    end: 1311,
   },
   {
     id: 8,

@@ -22,11 +22,17 @@ export default function Player({ trigger, blue, onPick: handlePick }: Props) {
     }
   };
 
-  const handleStart = (): void => {
-    playerRef.current?.seekTo(trigger.start);
+  const handlePlay = (): void => {
+    if (playerRef.current && playerRef.current.getCurrentTime() < trigger.start) {
+      playerRef.current?.seekTo(trigger.start);
+    }
+    setIsPlaying(true);
   };
 
   const togglePlaying = (): void => {
+    if (playerRef.current && playerRef.current.getCurrentTime() < trigger.start) {
+      playerRef.current?.seekTo(trigger.start);
+    }
     setIsPlaying((p) => !p);
   };
 
@@ -60,7 +66,8 @@ export default function Player({ trigger, blue, onPick: handlePick }: Props) {
             onError={(e) => console.log(e)}
             width="100%"
             height="100%"
-            onStart={handleStart}
+            onPlay={handlePlay}
+            onPause={() => setIsPlaying(false)}
           />
           <div className="flex flex-wrap justify-center items-center gap-2 mt-3">
             <button onClick={togglePlaying} className={`btn ${blue ? "btn-blue" : "btn-purple"}`}>
