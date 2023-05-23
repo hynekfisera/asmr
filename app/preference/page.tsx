@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 _triggers.sort(() => Math.random() - 0.5);
 
 export default function Preference() {
-  const [triggers, setTriggers] = useState<Trigger[]>(_triggers.filter((t, i) => i < 4));
+  const [triggers, setTriggers] = useState<Trigger[]>(_triggers.filter((t, i) => i <= 8));
   const [index, setIndex] = useState(0);
   const triggersForNextRound = useRef<Trigger[]>([]);
   const router = useRouter();
@@ -32,14 +32,15 @@ export default function Preference() {
   };
 
   return (
-    <main className="flex flex-col justify-center items-center">
-      <h1 className="text-3xl font-semibold text-gray-200 mb-1">
+    <main className="flex flex-col justify-center items-center px-6 py-12 md:py-6">
+      <h1 className="text-3xl font-semibold text-gray-200 mb-0.5">
         <span className="text-blue-300">This</span> or <span className="text-purple-300">that</span>
       </h1>
+      <div className="mb-1 text-center text-sm text-gray-300">Round {3 - Math.log2(triggers.length / 2)} of 3</div>
       <div className="mb-6 max-w-lg text-center text-xs text-gray-400">
         Click <strong className="font-semibold">Play</strong> and listen to both triggers. Feel free to replay them as many times as you want. Then make a decision and click <strong className="font-semibold">Pick this one</strong> under your preferred trigger.
       </div>
-      <div className="w-full max-w-screen-xl mx-auto grid grid-cols-2 gap-6">
+      <div className="w-full max-w-screen-xl mx-auto grid md:grid-cols-2 gap-10 md:gap-6">
         <Player trigger={currentTrigger1} blue={true} onPick={() => handlePick(currentTrigger1)} />
         <Player trigger={currentTrigger2} blue={false} onPick={() => handlePick(currentTrigger2)} />
       </div>

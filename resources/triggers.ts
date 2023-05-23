@@ -29,6 +29,34 @@ const triggers: Trigger[] = [
     start: 1797,
     end: 1820,
   },
+  {
+    id: 5,
+    name: "Silicone Brush",
+    url: "https://youtu.be/yCATglIFf_I",
+    start: 749,
+    end: 768,
+  },
+  {
+    id: 6,
+    name: "Ear Pick",
+    url: "https://youtu.be/yCATglIFf_I",
+    start: 1895,
+    end: 1921,
+  },
+  {
+    id: 7,
+    name: "Mic Brushing",
+    url: "https://youtu.be/HUlpQaAnDd0",
+    start: 1286,
+    end: 1312,
+  },
+  {
+    id: 8,
+    name: "Lens Brushing",
+    url: "https://youtu.be/HUlpQaAnDd0",
+    start: 1483,
+    end: 1504,
+  },
 ];
 
 export default triggers;
