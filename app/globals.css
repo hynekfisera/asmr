@@ -44,4 +44,38 @@
   .link {
     @apply text-indigo-300 underline hover:text-indigo-200;
   }
+
+  .progress-blue {
+    border: none;
+    @apply text-blue-500 bg-gray-800;
+  }
+
+  .progress-blue::-moz-progress-bar {
+    @apply bg-gray-800;
+  }
+
+  .progress-blue::-webkit-progress-value {
+    @apply bg-blue-500;
+  }
+
+  .progress-blue::-webkit-progress-bar {
+    @apply bg-gray-800;
+  }
+
+  .progress-purple {
+    border: none;
+    @apply text-purple-500 bg-gray-800;
+  }
+
+  .progress-purple::-moz-progress-bar {
+    @apply bg-gray-800;
+  }
+
+  .progress-purple::-webkit-progress-value {
+    @apply bg-purple-500;
+  }
+
+  .progress-purple::-webkit-progress-bar {
+    @apply bg-gray-800;
+  }
 }

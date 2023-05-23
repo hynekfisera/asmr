@@ -13,6 +13,7 @@ type Props = {
 export default function Player({ trigger, blue, onPick: handlePick }: Props) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [played, setPlayed] = useState(0);
   const playerRef = useRef<ReactPlayer>(null);
 
   const handleProgress = (progress: { playedSeconds: number }): void => {
@@ -20,6 +21,7 @@ export default function Player({ trigger, blue, onPick: handlePick }: Props) {
       setIsPlaying(false);
       playerRef.current?.seekTo(trigger.start);
     }
+    setPlayed((playerRef.current && playerRef.current.getCurrentTime() - trigger.start) || 0);
   };
 
   const handlePlay = (): void => {
@@ -39,18 +41,19 @@ export default function Player({ trigger, blue, onPick: handlePick }: Props) {
   useEffect(() => {
     setIsPlaying(false);
     setIsLoaded(true);
+    setPlayed(0);
   }, [trigger]);
 
-  if (isLoaded) {
-    return (
-      <section>
-        <h2 className="text-gray-200 text-xl font-semibold">{trigger.name}</h2>
-        <div className={`mb-3 text-xs ${blue ? "text-blue-300" : "text-purple-300"}`}>
-          <Link href={trigger.url} target="_blank" rel="noopener noreferrer">
-            {trigger.url}
-          </Link>
-        </div>
-        <div className="w-full aspect-video">
+  return (
+    <section>
+      <h2 className="text-gray-200 text-xl font-semibold">{trigger.name}</h2>
+      <div className={`mb-3 text-xs ${blue ? "text-blue-300" : "text-purple-300"}`}>
+        <Link href={trigger.url} target="_blank" rel="noopener noreferrer">
+          {trigger.url}
+        </Link>
+      </div>
+      <div className="w-full aspect-video">
+        {isLoaded && (
           <ReactPlayer
             playing={isPlaying}
             ref={playerRef}
@@ -68,19 +71,19 @@ export default function Player({ trigger, blue, onPick: handlePick }: Props) {
             height="100%"
             onPlay={handlePlay}
             onPause={() => setIsPlaying(false)}
+            progressInterval={20}
           />
-          <div className="flex flex-wrap justify-center items-center gap-2 mt-3">
-            <button onClick={togglePlaying} className={`btn ${blue ? "btn-blue" : "btn-purple"}`}>
-              {isPlaying ? "Pause" : "Play"}
-            </button>
-            <button onClick={handlePick} className={`btn ${blue ? "btn-blue-secondary" : "btn-purple-secondary"}`}>
-              Pick this one
-            </button>
-          </div>
+        )}
+        <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${blue ? "progress-blue" : "progress-purple"}`} />
+        <div className="flex flex-wrap justify-center items-center gap-2 mt-3">
+          <button onClick={togglePlaying} className={`btn ${blue ? "btn-blue" : "btn-purple"}`}>
+            {isPlaying ? "Pause" : "Play"}
+          </button>
+          <button onClick={handlePick} className={`btn ${blue ? "btn-blue-secondary" : "btn-purple-secondary"}`}>
+            Pick this one
+          </button>
         </div>
-      </section>
-    );
-  } else {
-    return <></>;
-  }
+      </div>
+    </section>
+  );
 }
