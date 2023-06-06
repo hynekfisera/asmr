@@ -42,7 +42,7 @@ export default function Preference() {
   return (
     <main className="flex flex-col justify-center items-center px-6 py-12 md:py-6">
       <h1 className="text-3xl font-semibold text-gray-200 mb-0.5">
-        <span className={altColor ? "text-blue-300" : "text-pink-300"}>This</span> or <span className={altColor ? "text-purple-300" : "text-green-300"}>that</span>
+        <span className={altColor ? "text-blue-300" : "text-pink-300"}>This</span> or <span className={altColor ? "text-purple-300" : "text-rose-300"}>that</span>
       </h1>
       <div className="mb-1 text-center text-sm text-gray-300">
         Round {status.current.round} of 3 | Decision {status.current.decision} of 7

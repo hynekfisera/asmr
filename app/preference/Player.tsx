@@ -48,7 +48,7 @@ export default function Player({ trigger, left, altColor, onPick: handlePick }: 
   return (
     <section>
       <h2 className="text-gray-200 text-xl font-semibold">{trigger.name}</h2>
-      <div className={`mb-3 text-xs ${left ? (altColor ? "text-blue-300" : "text-pink-300") : altColor ? "text-purple-300" : "text-green-300"}`}>
+      <div className={`mb-3 text-xs ${left ? (altColor ? "text-blue-300" : "text-pink-300") : altColor ? "text-purple-300" : "text-rose-300"}`}>
         <Link href={trigger.url} target="_blank" rel="noopener noreferrer">
           {trigger.url}
         </Link>
@@ -75,12 +75,12 @@ export default function Player({ trigger, left, altColor, onPick: handlePick }: 
             progressInterval={20}
           />
         )}
-        <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${left ? (altColor ? "progress-blue" : "progress-pink") : altColor ? "progress-purple" : "progress-green"}`} />
+        <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${left ? (altColor ? "progress-blue" : "progress-pink") : altColor ? "progress-purple" : "progress-rose"}`} />
         <div className="flex flex-wrap justify-center items-center gap-2 mt-3">
-          <button onClick={togglePlaying} className={`btn ${left ? (altColor ? "btn-blue" : "btn-pink") : altColor ? "btn-purple" : "btn-green"}`}>
+          <button onClick={togglePlaying} className={`btn ${left ? (altColor ? "btn-blue" : "btn-pink") : altColor ? "btn-purple" : "btn-rose"}`}>
             {isPlaying ? "Pause" : "Play"}
           </button>
-          <button onClick={handlePick} className={`btn ${left ? (altColor ? "btn-blue-secondary" : "btn-pink-secondary") : altColor ? "btn-purple-secondary" : "btn-green-secondary"}`}>
+          <button onClick={handlePick} className={`btn ${left ? (altColor ? "btn-blue-secondary" : "btn-pink-secondary") : altColor ? "btn-purple-secondary" : "btn-rose-secondary"}`}>
             Pick this one
           </button>
         </div>

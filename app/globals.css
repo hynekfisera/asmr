@@ -49,12 +49,12 @@
     @apply border-pink-400 hover:border-pink-500 text-pink-300 transition duration-200;
   }
 
-  .btn-green {
-    @apply border-transparent bg-green-500 hover:bg-green-600 text-green-100 transition duration-200;
+  .btn-rose {
+    @apply border-transparent bg-rose-500 hover:bg-rose-600 text-rose-100 transition duration-200;
   }
 
-  .btn-green-secondary {
-    @apply border-green-400 hover:border-green-500 text-green-300 transition duration-200;
+  .btn-rose-secondary {
+    @apply border-rose-400 hover:border-rose-500 text-rose-300 transition duration-200;
   }
 
   .link {
@@ -112,20 +112,20 @@
     @apply bg-gray-800;
   }
 
-  .progress-green {
+  .progress-rose {
     border: none;
-    @apply text-green-500 bg-gray-800;
+    @apply text-rose-500 bg-gray-800;
   }
 
-  .progress-green::-moz-progress-bar {
+  .progress-rose::-moz-progress-bar {
     @apply bg-gray-800;
   }
 
-  .progress-green::-webkit-progress-value {
-    @apply bg-green-500;
+  .progress-rose::-webkit-progress-value {
+    @apply bg-rose-500;
   }
 
-  .progress-green::-webkit-progress-bar {
+  .progress-rose::-webkit-progress-bar {
     @apply bg-gray-800;
   }
 }
