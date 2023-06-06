@@ -75,7 +75,7 @@ export default function Player({ trigger, left, altColor, onPick: handlePick }: 
             progressInterval={20}
           />
         )}
-        <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${left ? "progress-blue" : "progress-purple"}`} />
+        <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${left ? (altColor ? "progress-blue" : "progress-pink") : altColor ? "progress-purple" : "progress-green"}`} />
         <div className="flex flex-wrap justify-center items-center gap-2 mt-3">
           <button onClick={togglePlaying} className={`btn ${left ? (altColor ? "btn-blue" : "btn-pink") : altColor ? "btn-purple" : "btn-green"}`}>
             {isPlaying ? "Pause" : "Play"}
