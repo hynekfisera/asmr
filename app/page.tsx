@@ -35,6 +35,14 @@ export default function Home() {
             Tutorial
           </Link>
         </div>
+        <div className="flex flex-wrap justify-center gap-3 -mt-2">
+          <Link href="https://github.com/hynekfisera/asmr" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:underline">
+            Star on GitHub
+          </Link>
+          <Link href="https://www.buymeacoffee.com/hynekfisera" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:underline">
+            Buy Me a Coffee
+          </Link>
+        </div>
       </div>
     </main>
   );

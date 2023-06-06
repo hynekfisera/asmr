@@ -6,11 +6,12 @@ import Link from "next/link";
 
 type Props = {
   trigger: Trigger;
-  blue: boolean;
+  left: boolean;
+  altColor: boolean;
   onPick?: () => void;
 };
 
-export default function Player({ trigger, blue, onPick: handlePick }: Props) {
+export default function Player({ trigger, left, altColor, onPick: handlePick }: Props) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [played, setPlayed] = useState(0);
@@ -47,7 +48,7 @@ export default function Player({ trigger, blue, onPick: handlePick }: Props) {
   return (
     <section>
       <h2 className="text-gray-200 text-xl font-semibold">{trigger.name}</h2>
-      <div className={`mb-3 text-xs ${blue ? "text-blue-300" : "text-purple-300"}`}>
+      <div className={`mb-3 text-xs ${left ? (altColor ? "text-blue-300" : "text-pink-300") : altColor ? "text-purple-300" : "text-green-300"}`}>
         <Link href={trigger.url} target="_blank" rel="noopener noreferrer">
           {trigger.url}
         </Link>
@@ -74,12 +75,12 @@ export default function Player({ trigger, blue, onPick: handlePick }: Props) {
             progressInterval={20}
           />
         )}
-        <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${blue ? "progress-blue" : "progress-purple"}`} />
+        <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${left ? "progress-blue" : "progress-purple"}`} />
         <div className="flex flex-wrap justify-center items-center gap-2 mt-3">
-          <button onClick={togglePlaying} className={`btn ${blue ? "btn-blue" : "btn-purple"}`}>
+          <button onClick={togglePlaying} className={`btn ${left ? (altColor ? "btn-blue" : "btn-pink") : altColor ? "btn-purple" : "btn-green"}`}>
             {isPlaying ? "Pause" : "Play"}
           </button>
-          <button onClick={handlePick} className={`btn ${blue ? "btn-blue-secondary" : "btn-purple-secondary"}`}>
+          <button onClick={handlePick} className={`btn ${left ? (altColor ? "btn-blue-secondary" : "btn-pink-secondary") : altColor ? "btn-purple-secondary" : "btn-green-secondary"}`}>
             Pick this one
           </button>
         </div>

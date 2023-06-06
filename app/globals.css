@@ -14,11 +14,11 @@
   }
 
   .btn {
-    @apply border-2 inline-block px-4 py-2 text-xs md:text-sm font-medium rounded-lg shadow-md shadow-indigo-900/75;
+    @apply border-2 inline-block px-4 py-2 text-xs md:text-sm font-medium rounded-lg;
   }
 
   .btn-primary {
-    @apply border-transparent bg-indigo-500 hover:bg-indigo-600 text-indigo-100 transition duration-200;
+    @apply border-transparent bg-indigo-500 hover:bg-indigo-600 text-indigo-100 transition duration-200 shadow-md shadow-indigo-900/75;
   }
 
   .btn-secondary {
@@ -39,6 +39,22 @@
 
   .btn-purple-secondary {
     @apply border-purple-400 hover:border-purple-500 text-purple-300 transition duration-200;
+  }
+
+  .btn-pink {
+    @apply border-transparent bg-pink-500 hover:bg-pink-600 text-pink-100 transition duration-200;
+  }
+
+  .btn-pink-secondary {
+    @apply border-pink-400 hover:border-pink-500 text-pink-300 transition duration-200;
+  }
+
+  .btn-green {
+    @apply border-transparent bg-green-500 hover:bg-green-600 text-green-100 transition duration-200;
+  }
+
+  .btn-green-secondary {
+    @apply border-green-400 hover:border-green-500 text-green-300 transition duration-200;
   }
 
   .link {
@@ -76,6 +92,40 @@
   }
 
   .progress-purple::-webkit-progress-bar {
+    @apply bg-gray-800;
+  }
+
+  .progress-pink {
+    border: none;
+    @apply text-pink-500 bg-gray-800;
+  }
+
+  .progress-pink::-moz-progress-bar {
+    @apply bg-gray-800;
+  }
+
+  .progress-pink::-webkit-progress-value {
+    @apply bg-pink-500;
+  }
+
+  .progress-pink::-webkit-progress-bar {
+    @apply bg-gray-800;
+  }
+
+  .progress-green {
+    border: none;
+    @apply text-green-500 bg-gray-800;
+  }
+
+  .progress-green::-moz-progress-bar {
+    @apply bg-gray-800;
+  }
+
+  .progress-green::-webkit-progress-value {
+    @apply bg-green-500;
+  }
+
+  .progress-green::-webkit-progress-bar {
     @apply bg-gray-800;
   }
 }
