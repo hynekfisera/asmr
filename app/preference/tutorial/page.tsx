@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import _triggers from "@/resources/triggers";
 
 export default function Tutorial() {
   return (
@@ -22,8 +21,8 @@ export default function Tutorial() {
           </li>
         </ul>
         <div className="flex flex-wrap justify-center gap-2.5">
-          <Link href="/" className="btn btn-secondary">
-            Back to home
+          <Link href="/preference" className="btn btn-secondary">
+            Back to the test
           </Link>
         </div>
       </div>

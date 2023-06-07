@@ -11,7 +11,7 @@ export default function Result({ params }: { params: { id: string } }) {
   const trigger = _triggers.find((t) => `${t.id}` === params.id);
 
   const handleStart = (): void => {
-    playerRef.current?.seekTo(trigger?.start || 0);
+    playerRef.current?.seekTo(trigger?.start ?? 0);
   };
 
   useEffect(() => {
@@ -35,8 +35,8 @@ export default function Result({ params }: { params: { id: string } }) {
             <Link href={trigger.url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Watch the full video
             </Link>
-            <Link href="/" className="btn btn-secondary">
-              Back to home
+            <Link href="/preference" className="btn btn-secondary">
+              Play again
             </Link>
           </div>
         </div>
