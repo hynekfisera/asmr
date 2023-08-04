@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import _triggers from "@/resources/triggers";
 import Player from "./Player";
 import { Trigger } from "@/types/Trigger";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const getInitialTriggers = () => {
   _triggers.sort(() => Math.random() - 0.5);
@@ -15,9 +15,15 @@ export default function Preference() {
   const [index, setIndex] = useState(0);
   const status = useRef<{ round: number; decision: number }>({ round: 1, decision: 1 });
   const triggersForNextRound = useRef<Trigger[]>([]);
+  const router = useRouter();
 
   const currentTrigger1 = triggers[index];
   const currentTrigger2 = triggers[index + 1];
+
+  if (status.current.decision >= 7) {
+    router.prefetch(`/preference/result/${currentTrigger1.id}`);
+    router.prefetch(`/preference/result/${currentTrigger2.id}`);
+  }
 
   const handlePick = (trigger: Trigger) => {
     status.current.decision++;
@@ -26,7 +32,7 @@ export default function Preference() {
       setIndex((i) => i + 2);
     } else {
       if (triggersForNextRound.current.length === 1) {
-        redirect(`/preference/result/${trigger.id}`);
+        router.push(`/preference/result/${trigger.id}`);
       } else {
         status.current.round++;
         setTriggers(triggersForNextRound.current);
