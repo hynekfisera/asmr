@@ -20,6 +20,11 @@ export default function Preference() {
   const currentTrigger1 = triggers[index];
   const currentTrigger2 = triggers[index + 1];
 
+  if (status.current.decision >= 7) {
+    router.prefetch(`/preference/result/${currentTrigger1.id}`);
+    router.prefetch(`/preference/result/${currentTrigger2.id}`);
+  }
+
   const handlePick = (trigger: Trigger) => {
     status.current.decision++;
     triggersForNextRound.current.push(trigger);
