@@ -1,10 +1,10 @@
-import { CreatorId } from "@/types/Creator";
+import { CREATOR_ID } from "@/types/Creator";
 import { Trigger } from "@/types/Trigger";
 
 const triggers: Trigger[] = [
   {
     id: 1,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Tiny Velcro Bows",
     url: "https://youtu.be/hUL_JdnWdEw",
     start: 259,
@@ -12,7 +12,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 2,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Water Bead Pouch",
     url: "https://youtu.be/02xYGcihZCE",
     start: 1367,
@@ -20,7 +20,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 3,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Foldable Book Light",
     url: "https://youtu.be/Jjai60__8TY",
     start: 856,
@@ -28,7 +28,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 4,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Wax Cubes",
     url: "https://youtu.be/8s2WrDhdS08",
     start: 1797,
@@ -36,7 +36,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 5,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Silicone Brush",
     url: "https://youtu.be/yCATglIFf_I",
     start: 749,
@@ -44,7 +44,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 6,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Ear Pick",
     url: "https://youtu.be/yCATglIFf_I",
     start: 1895,
@@ -52,7 +52,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 7,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Mic Brushing",
     url: "https://youtu.be/HUlpQaAnDd0",
     start: 1286,
@@ -60,7 +60,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 8,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Lens Brushing",
     url: "https://youtu.be/HUlpQaAnDd0",
     start: 1483,
@@ -68,7 +68,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 9,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Toaster Coaster Tapping",
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 445,
@@ -76,7 +76,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 10,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Silicone Cup Tapping",
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 668,
@@ -84,7 +84,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 11,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Mic Scratching",
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 854,
@@ -92,7 +92,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 12,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Hand Cream Tube Tapping",
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 929,
@@ -100,7 +100,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 13,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Makeup Case Tapping",
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 1097,
@@ -108,7 +108,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 14,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Journal Tapping",
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 1431,
@@ -116,7 +116,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 15,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Dish Brush",
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 300,
@@ -124,7 +124,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 16,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Jar Sounds",
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 423,
@@ -132,7 +132,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 17,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Dog Hair Coarse Foam Sponge",
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 627,
@@ -140,7 +140,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 18,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Dream Oil Jar",
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 884,
@@ -148,7 +148,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 19,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Wood Tapping / Brush Sounds",
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 1030,
@@ -156,7 +156,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 20,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Finger Sized Dog Toothbrushes",
     url: "https://youtu.be/jgRq4SCwMwA",
     start: 1078,
@@ -164,7 +164,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 21,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Macro Keyboard",
     url: "https://youtu.be/jgRq4SCwMwA",
     start: 1243,
@@ -172,7 +172,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 22,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Sunglasses",
     url: "https://youtu.be/jgRq4SCwMwA",
     start: 1514,
@@ -180,7 +180,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 23,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Plastic Disc Tapping",
     url: "https://youtu.be/fbW-ewvl9z0",
     start: 309,
@@ -188,7 +188,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 24,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Rolling Wooden Balls",
     url: "https://youtu.be/fbW-ewvl9z0",
     start: 1194,
@@ -196,7 +196,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 25,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Silicone Cup Scratching",
     url: "https://youtu.be/t23YdznJ6-8",
     start: 484,
@@ -204,7 +204,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 26,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Watermelon Dog Toy",
     url: "https://youtu.be/t23YdznJ6-8",
     start: 1023,
@@ -212,7 +212,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 27,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Cardboard Tube",
     url: "https://youtu.be/t23YdznJ6-8",
     start: 1339,
@@ -220,7 +220,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 28,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Lotion Bottle Tapping",
     url: "https://youtu.be/t23YdznJ6-8",
     start: 1664,
@@ -228,7 +228,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 29,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Heat Sensitive Foam Pad",
     url: "https://youtu.be/02xYGcihZCE",
     start: 2733,
@@ -236,7 +236,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 30,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Tapping On A Small Box",
     url: "https://youtu.be/HUlpQaAnDd0",
     start: 433,
@@ -244,7 +244,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 31,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Tapping On A Milk Carton",
     url: "https://youtu.be/-8BNDacMZUk",
     start: 701,
@@ -252,7 +252,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 32,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Real Toast Scratching",
     url: "https://youtu.be/-8BNDacMZUk",
     start: 1362,
@@ -260,7 +260,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 33,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Tapping On A Soda Can",
     url: "https://youtu.be/m2u1C2Ko7K8",
     start: 528,
@@ -268,7 +268,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 34,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Tapping On A Popsicle Stick",
     url: "https://youtu.be/m2u1C2Ko7K8",
     start: 1582,
@@ -276,7 +276,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 35,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Soap Wrapper",
     url: "https://youtu.be/m2u1C2Ko7K8",
     start: 2916,
@@ -284,7 +284,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 36,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Mechanical Keyboard",
     url: "https://youtu.be/dhQsq22QYKM",
     start: 1459,
@@ -292,7 +292,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 37,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Coloring On A Crinkly Cartoon Ball",
     url: "https://youtu.be/ereUyeiKI5Y",
     start: 438,
@@ -300,7 +300,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 38,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Liquid Sounds",
     url: "https://youtu.be/_fD9nfGjO_A",
     start: 967,
@@ -308,7 +308,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 39,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Coarse Sponge Sounds",
     url: "https://youtu.be/_fD9nfGjO_A",
     start: 1149,
@@ -316,7 +316,7 @@ const triggers: Trigger[] = [
   },
   {
     id: 40,
-    creatorId: CreatorId.Gibi,
+    creatorId: CREATOR_ID.Gibi,
     name: "Earpicks On The Mics",
     url: "https://youtu.be/_fD9nfGjO_A",
     start: 1475,

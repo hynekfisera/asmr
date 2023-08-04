@@ -1,5 +1,5 @@
-import { Creator, CreatorId } from "@/types/Creator";
+import { Creator, CREATOR_ID } from "@/types/Creator";
 
-const creators: Creator[] = [{ id: CreatorId.Gibi, name: "Gibi ASMR", url: "https://www.youtube.com/@GibiASMR" }];
+const creators: Creator[] = [{ id: CREATOR_ID.Gibi, name: "Gibi ASMR", url: "https://www.youtube.com/@GibiASMR" }];
 
 export default creators;
