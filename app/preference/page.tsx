@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center px-6 py-12 md:py-6">
       <div className="max-w-screen-md flex flex-col justify-center items-center gap-6">
-        <h1 className="text-2xl md:text-3xl font-light text-gray-200 shadow text-center">Preference test</h1>
+        <h1 className="text-2xl md:text-3xl font-light text-gray-200 text-center">Preference test</h1>
         <p className="text-gray-300 text-center text-sm sm:text-base">
           Inspired by &quot;this or that&quot; test from{" "}
           <Link href="https://youtu.be/rlOQMh98S9w" className="link" target="_blank" rel="noopener noreferrer">

@@ -30,15 +30,14 @@ const items: Item[] = [
   {
     title: "Triggers",
     href: "/triggers",
-    description: "Coming soon",
-    disabled: true,
+    description: "Browse all triggers",
   },
 ];
 
 export default function Home() {
   return (
     <main className="flex flex-col px-6 py-12 md:py-6">
-      <h1 className="mt-12 text-2xl md:text-3xl font-light text-gray-200 shadow text-center sm:text-left">Interactive ASMR experience</h1>
+      <h1 className="mt-12 text-2xl md:text-3xl font-light text-gray-200 text-center sm:text-left">Interactive ASMR experience</h1>
       <div className="mt-1 text-xs text-gray-400 flex flex-wrap gap-1">
         <p>
           Created by{" "}

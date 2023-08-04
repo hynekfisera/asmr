@@ -5,7 +5,7 @@ export default function Tutorial() {
   return (
     <main className="flex flex-col justify-center items-center px-6 py-12 md:py-6">
       <div className="max-w-lg flex flex-col justify-center items-center gap-6">
-        <h1 className="text-2xl lg:text-3xl font-light text-gray-200 shadow text-center">Tutorial</h1>
+        <h1 className="text-2xl lg:text-3xl font-light text-gray-200 text-center">Tutorial</h1>
         <ul className="text-gray-300 text-sm sm:text-base list-disc flex flex-col gap-2 list-inside">
           <li>
             First, <strong>8 sounds/triggers</strong> are <strong>randomly</strong> chosen.
