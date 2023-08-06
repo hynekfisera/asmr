@@ -4,6 +4,8 @@ import ReactPlayer from "react-player";
 import { Trigger } from "@/types/Trigger";
 import Link from "next/link";
 import { getCreatorById } from "@/utils/creator.functions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faPause, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   trigger: Trigger;
@@ -81,10 +83,18 @@ export default function Player({ trigger, left, altColor, onPick: handlePick }: 
         <progress value={played} max={trigger.end - trigger.start} className={`block h-1 w-full ${left ? (altColor ? "progress-blue" : "progress-pink") : altColor ? "progress-purple" : "progress-rose"}`} />
         <div className="flex flex-wrap justify-center items-center gap-2 mt-3">
           <button onClick={togglePlaying} className={`btn ${left ? (altColor ? "btn-blue" : "btn-pink") : altColor ? "btn-purple" : "btn-rose"}`}>
-            {isPlaying ? "Pause" : "Play"}
+            {isPlaying ? (
+              <>
+                <FontAwesomeIcon icon={faPause} /> Pause
+              </>
+            ) : (
+              <>
+                <FontAwesomeIcon icon={faPlay} /> Play
+              </>
+            )}
           </button>
           <button onClick={handlePick} className={`btn ${left ? (altColor ? "btn-blue-secondary" : "btn-pink-secondary") : altColor ? "btn-purple-secondary" : "btn-rose-secondary"}`}>
-            Pick this one
+            <FontAwesomeIcon icon={faCheck} /> Pick this one
           </button>
         </div>
       </div>
