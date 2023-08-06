@@ -52,7 +52,7 @@ export default function Player({ trigger, left, altColor, onPick: handlePick }: 
     <section>
       <h2 className="text-gray-200 text-xl font-semibold">{trigger.name}</h2>
       <div className={`mb-3 text-xs ${left ? (altColor ? "text-blue-300" : "text-pink-300") : altColor ? "text-purple-300" : "text-rose-300"}`}>
-        <Link href={trigger.url} target="_blank" rel="noopener noreferrer">
+        <Link href={trigger.url} className="hover:underline" target="_blank" rel="noopener noreferrer">
           {creator.name}
         </Link>
       </div>

@@ -3,9 +3,11 @@ import React, { useState, useEffect, useRef } from "react";
 import _triggers from "@/resources/triggers";
 import ReactPlayer from "react-player";
 import Link from "next/link";
+import { getCreatorById } from "@/utils/creator.functions";
 
 export default function Result({ params }: { params: { id: string } }) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const playerRef = useRef<ReactPlayer>(null);
 
   const trigger = _triggers.find((t) => `${t.id}` === params.id);
@@ -25,10 +27,16 @@ export default function Result({ params }: { params: { id: string } }) {
           <div>
             <h1 className="text-lg sm:text-xl md:text-2xl text-center text-gray-200 mb-1">We have a winner!</h1>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-purple-300 text-center">{trigger.name}</h2>
+            <h3 className="text-sm sm:text-base md:text-lg text-gray-100 text-center">
+              by{" "}
+              <Link href={getCreatorById(trigger.creatorId)!.url} className="hover:underline">
+                {getCreatorById(trigger.creatorId)!.name}
+              </Link>
+            </h3>
           </div>
           {isLoaded && (
             <div className="w-full aspect-video max-w-md">
-              <ReactPlayer ref={playerRef} url={trigger.url} controls={true} onError={(e) => console.log(e)} width="100%" height="100%" onStart={handleStart} />
+              <ReactPlayer playing={isPlaying} ref={playerRef} url={trigger.url} controls={true} onError={(e) => console.log(e)} width="100%" height="100%" onStart={handleStart} onReady={() => setIsPlaying(true)} />
             </div>
           )}
           <div className="flex flex-wrap justify-center gap-2.5">

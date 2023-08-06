@@ -10,9 +10,11 @@ export default function Home() {
       </Link>
       <h1 className="my-4 text-2xl md:text-3xl font-light text-gray-200">Browse all triggers</h1>
       <section className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-12">
-        {triggers.map((trigger) => (
-          <Trigger key={trigger.id} trigger={trigger} />
-        ))}
+        {triggers
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((trigger) => (
+            <Trigger key={trigger.id} trigger={trigger} />
+          ))}
       </section>
     </main>
   );

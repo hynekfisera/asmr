@@ -11,6 +11,7 @@ type Props = {
 
 export default function TriggerComponent({ trigger }: Props) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const playerRef = useRef<ReactPlayer>(null);
 
   const handleStart = (): void => {
@@ -33,7 +34,7 @@ export default function TriggerComponent({ trigger }: Props) {
       </Link>
       {isLoaded && (
         <div className="w-full aspect-video mt-auto">
-          <ReactPlayer ref={playerRef} url={trigger.url} controls={true} onError={(e) => console.log(e)} width="100%" height="100%" onStart={handleStart} />
+          <ReactPlayer playing={isPlaying} ref={playerRef} url={trigger.url} controls={true} onError={(e) => console.log(e)} width="100%" height="100%" onStart={handleStart} onReady={() => setIsPlaying(true)} />
         </div>
       )}
     </div>
