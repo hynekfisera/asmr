@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import tests from "@/resources/tests";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return tests.filter((test) => !test.disabled).map((test) => ({ test: test.id }));
 }

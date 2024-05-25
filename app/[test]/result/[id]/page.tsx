@@ -5,6 +5,8 @@ import { getCreatorById } from "@/utils/creator.functions";
 import Player from "./Player";
 import tests from "@/resources/tests";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return _triggers.map((trigger) => ({ test: "preference", id: `${trigger.id}` }));
 }

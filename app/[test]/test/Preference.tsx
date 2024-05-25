@@ -50,8 +50,8 @@ export default function Preference({ initialTriggers }: { initialTriggers: Trigg
         Click <strong className="font-semibold">Play</strong> and listen to both triggers. Feel free to replay them as many times as you want. Then make a decision using the <strong className="font-semibold">Pick this one</strong> button under your preferred trigger.
       </div>
       <div className="w-full max-w-screen-xl mx-auto grid md:grid-cols-2 gap-10 md:gap-6">
-        <Player trigger={currentTrigger1} left={true} altColor={altColor} onPick={() => handlePick(currentTrigger1)} />
-        <Player trigger={currentTrigger2} left={false} altColor={altColor} onPick={() => handlePick(currentTrigger2)} />
+        <Player key={"1_" + status.current.decision} trigger={currentTrigger1} left={true} altColor={altColor} onPick={() => handlePick(currentTrigger1)} />
+        <Player key={"2_" + status.current.decision} trigger={currentTrigger2} left={false} altColor={altColor} onPick={() => handlePick(currentTrigger2)} />
       </div>
       <p></p>
     </main>
