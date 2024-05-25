@@ -8,7 +8,12 @@ import tests from "@/resources/tests";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return _triggers.map((trigger) => ({ test: "preference", id: `${trigger.id}` }));
+  const activeTests = tests.filter((test) => !test.disabled);
+  const paths: { test: string; id: string }[] = [];
+  for (const test of activeTests) {
+    _triggers.forEach((trigger) => paths.push({ test: test.id, id: `${trigger.id}` }));
+  }
+  return paths;
 }
 
 export default function Result({ params }: { params: { test: string; id: string } }) {
@@ -27,7 +32,7 @@ export default function Result({ params }: { params: { test: string; id: string 
       {trigger && (
         <div className="flex flex-col items-center w-full gap-8">
           <div>
-            <h1 className="text-lg sm:text-xl md:text-2xl text-center text-gray-200 mb-1">We have a winner!</h1>
+            <h1 className="text-lg sm:text-xl md:text-2xl text-center text-gray-200 mb-1">{test.resultMessage}</h1>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-purple-300 text-center">{trigger.name}</h2>
             <h3 className="text-sm sm:text-base md:text-lg text-gray-100 text-center">
               by{" "}
@@ -38,12 +43,26 @@ export default function Result({ params }: { params: { test: string; id: string 
           </div>
           <Player trigger={trigger} />
           <div className="flex flex-wrap justify-center gap-2.5">
-            <Link href={trigger.url} className="btn btn-purple" target="_blank" rel="noopener noreferrer">
-              Watch the full video
-            </Link>
-            <Link href={test.href} className="btn btn-purple-secondary">
-              Play again
-            </Link>
+            {test.id === "preference" && (
+              <>
+                <Link href={test.href} className="btn btn-purple">
+                  Play again
+                </Link>
+                <Link href={trigger.url} className="btn btn-purple-secondary" target="_blank" rel="noopener noreferrer">
+                  Watch the full video
+                </Link>
+              </>
+            )}
+            {test.id === "guess" && (
+              <>
+                <Link href="/guess/test" className="btn btn-purple">
+                  Next trigger
+                </Link>
+                <Link href="/" className="btn btn-purple-secondary">
+                  Back to home
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

@@ -9,7 +9,7 @@ const tests: Test[] = [
     image: Preference,
     title: "This or that",
     href: "/preference",
-    description: "~10 minutes",
+    description: "~7 minutes",
     descriptionLong: "Two ASMR triggers will appear. Once you decide which one you like more, click on the button below the video. After you finish the test, you will be able to see your #1 trigger.",
     tutorial: [
       "First, 8 sounds/triggers are randomly chosen.",
@@ -17,14 +17,17 @@ const tests: Test[] = [
       "There is a total of 3 rounds (7 decisions). Only triggers you pick continue to the next round, so the number of total triggers in the first round is 8, then 4, then 2 and after the third round we have a winner.",
       "It is recommended to use the Play button over the default YouTube player controls.",
     ],
+    resultMessage: "We have a winner!",
   },
   {
     id: "guess",
     image: Guess,
     title: "Guess the trigger",
     href: "/guess",
-    description: "Coming soon",
-    disabled: true,
+    description: "~30 seconds",
+    descriptionLong: "A single ASMR trigger will appear. Listen to the trigger and try to guess what it is. You will have 4 options to choose from.",
+    tutorial: ["First, 1 trigger is randomly chosen.", "Click the Play button and listen to the trigger. You may try to guess in your head first without seeing the options.", "Then click the Show options button and choose which trigger you think it is."],
+    resultMessage: "The correct answer is",
   },
   {
     id: "match",

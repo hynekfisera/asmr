@@ -57,6 +57,14 @@
     @apply border-rose-400 hover:border-rose-500 text-rose-300 transition duration-200;
   }
 
+  .btn-green {
+    @apply border-transparent bg-green-500 hover:bg-green-600 text-green-100 transition duration-200;
+  }
+
+  .btn-green-secondary {
+    @apply border-green-400 hover:border-green-500 text-green-300 transition duration-200;
+  }
+
   .link {
     @apply text-purple-300 underline hover:text-purple-200;
   }

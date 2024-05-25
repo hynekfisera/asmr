@@ -10,4 +10,5 @@ export type Test = {
   openInNewTab?: boolean;
   disabled?: boolean;
   tutorial?: string[];
+  resultMessage?: string;
 };

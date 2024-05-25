@@ -1,25 +1,27 @@
 import tests from "@/resources/tests";
 import React from "react";
 import Preference from "./Preference";
-import _triggers from "@/resources/triggers";
+import Guess from "./Guess";
+import { redirect } from "next/navigation";
+import triggers from "@/resources/triggers";
 
-export const dynamicParams = false;
+export const dynamic = "force-dynamic";
 
-export async function generateStaticParams() {
-  return tests.filter((test) => !test.disabled).map((test) => ({ test: test.id }));
-}
-
-export default function Test({ params }: { params: { test: string } }) {
+export default async function Test({ params }: { params: { test: string } }) {
   const test = tests.find((t) => t.id === params.test);
 
   if (!test) {
-    throw new Error("Invalid test id");
+    redirect("/404");
   }
 
-  if (test.id === "preference") {
-    _triggers.sort(() => Math.random() - 0.5);
-    return <Preference initialTriggers={_triggers.slice(0, 8)} />;
-  } else {
-    return <></>;
+  triggers.sort(() => Math.random() - 0.5);
+
+  switch (test.id) {
+    case "preference":
+      return <Preference initialTriggers={triggers.slice(0, 8)} />;
+    case "guess":
+      return <Guess trigger={triggers[0]} options={triggers.slice(0, 4).sort(() => Math.random() - 0.5)} />;
+    default:
+      return <></>;
   }
 }
