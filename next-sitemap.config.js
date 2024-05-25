@@ -2,4 +2,5 @@
 module.exports = {
   siteUrl: "https://asmr.hynekfisera.com",
   generateRobotsTxt: true,
+  exclude: ["/triggers"],
 };

@@ -58,7 +58,7 @@
   }
 
   .link {
-    @apply text-indigo-300 underline hover:text-indigo-200;
+    @apply text-purple-300 underline hover:text-purple-200;
   }
 
   .progress-blue {

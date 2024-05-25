@@ -21,7 +21,7 @@ export default function Tutorial() {
           </li>
         </ul>
         <div className="flex flex-wrap justify-center gap-2.5">
-          <Link href="/preference" className="btn btn-secondary">
+          <Link href="/preference" className="btn btn-purple-secondary">
             Back to the test
           </Link>
         </div>

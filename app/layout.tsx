@@ -6,11 +6,15 @@ import GAWrapper from "./GAWrapper";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
+import type { Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "black",
+};
 
 export const metadata: Metadata = {
   title: "Interactive ASMR Experience",
   description: 'Website inspired by "this or that" test from YouTube video by @TiptoeTingles and @GibiASMR. This website allows you to try this test out by yourself.',
-  themeColor: "#030712",
 };
 
 const inter = Inter({ subsets: ["latin"] });

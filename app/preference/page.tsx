@@ -9,10 +9,10 @@ export default function Home() {
         <h1 className="text-2xl md:text-3xl font-light text-gray-200 text-center">Preference test</h1>
         <p className="text-gray-300 text-center text-sm sm:text-base">Two ASMR triggers will appear. Once you decide which one you like more, click on the button below the video. After you finish the test, you will be able to see your #1 trigger.</p>
         <div className="flex flex-wrap justify-center gap-2.5">
-          <Link href="/preference/test" className="btn btn-primary">
+          <Link href="/preference/test" className="btn btn-purple">
             Start preference test
           </Link>
-          <Link href="/preference/tutorial" className="btn btn-secondary">
+          <Link href="/preference/tutorial" className="btn btn-purple-secondary">
             Tutorial
           </Link>
         </div>
