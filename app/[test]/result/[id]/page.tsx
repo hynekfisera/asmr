@@ -1,24 +1,19 @@
-"use client";
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import _triggers from "@/resources/triggers";
-import ReactPlayer from "react-player";
 import Link from "next/link";
 import { getCreatorById } from "@/utils/creator.functions";
+import Player from "./Player";
+
+export async function generateStaticParams() {
+  return _triggers.map((trigger) => ({ test: "preference", id: `${trigger.id}` }));
+}
 
 export default function Result({ params }: { params: { id: string } }) {
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const playerRef = useRef<ReactPlayer>(null);
-
   const trigger = _triggers.find((t) => `${t.id}` === params.id);
 
-  const handleStart = (): void => {
-    playerRef.current?.seekTo(trigger?.start ?? 0);
-  };
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  if (!trigger) {
+    throw new Error("Invalid trigger id");
+  }
 
   return (
     <main className="flex flex-col justify-center items-center px-6 py-12 md:py-6">
@@ -34,16 +29,12 @@ export default function Result({ params }: { params: { id: string } }) {
               </Link>
             </h3>
           </div>
-          {isLoaded && (
-            <div className="w-full aspect-video max-w-md">
-              <ReactPlayer playing={isPlaying} ref={playerRef} url={trigger.url} controls={true} onError={(e) => console.log(e)} width="100%" height="100%" onStart={handleStart} onReady={() => setIsPlaying(true)} />
-            </div>
-          )}
+          <Player trigger={trigger} />
           <div className="flex flex-wrap justify-center gap-2.5">
-            <Link href={trigger.url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <Link href={trigger.url} className="btn btn-purple" target="_blank" rel="noopener noreferrer">
               Watch the full video
             </Link>
-            <Link href="/preference" className="btn btn-secondary">
+            <Link href="/preference" className="btn btn-purple-secondary">
               Play again
             </Link>
           </div>

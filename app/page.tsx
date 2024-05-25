@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center px-6 py-12 md:py-6">
       <div className="w-full h-full flex flex-col items-center">
-        <h1 className="mt-12 md:mt-16 text-2xl md:text-3xl xl:text-4xl text-gray-100">Interactive ASMR experience</h1>
+        <h1 className="mt-12 md:mt-16 text-2xl md:text-3xl xl:text-4xl text-gray-100 text-center">Interactive ASMR experience</h1>
         <div className="mt-3 text-sm md:text-base text-gray-300 flex flex-wrap gap-1 text-center max-w-xl">
           <p>
             Inspired by{" "}
@@ -33,7 +33,7 @@ export default function Home() {
               key={test.href}
               className={`w-full sm:w-[calc(50%-1.5rem)] flex justify-center items-center gap-4 bg-slate-200/10 px-8 py-4 rounded-lg border-2 border-transparent ${test.disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer hover:border-purple-400"}`}
             >
-              <Image src={test.image} alt={"Icon representing the " + test.title + " test"} className="h-full max-h-12 w-auto" />
+              <Image src={test.image} alt={"Icon representing the " + test.title + " test"} className="h-full max-h-10 sm:max-h-12 w-auto" />
               <div className="flex flex-col py-2">
                 <div className="text-gray-200 text-lg">{test.title}</div>
                 <div className="text-gray-400 text-sm">{test.description}</div>
