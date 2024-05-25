@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import Player from "./Player";
 import { Trigger } from "@/types/Trigger";
 import { useRouter } from "next/navigation";
+import fetchNewTriggers from "@/app/actions";
 
 export default function Preference({ initialTriggers }: { initialTriggers: Trigger[] }) {
   const [triggers, setTriggers] = useState<Trigger[]>(initialTriggers);
@@ -26,6 +27,7 @@ export default function Preference({ initialTriggers }: { initialTriggers: Trigg
       setIndex((i) => i + 2);
     } else {
       if (triggersForNextRound.current.length === 1) {
+        fetchNewTriggers();
         router.push(`/preference/result/${trigger.id}`);
       } else {
         status.current.round++;
