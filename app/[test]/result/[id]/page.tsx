@@ -3,16 +3,21 @@ import _triggers from "@/resources/triggers";
 import Link from "next/link";
 import { getCreatorById } from "@/utils/creator.functions";
 import Player from "./Player";
+import tests from "@/resources/tests";
 
 export async function generateStaticParams() {
   return _triggers.map((trigger) => ({ test: "preference", id: `${trigger.id}` }));
 }
 
-export default function Result({ params }: { params: { id: string } }) {
+export default function Result({ params }: { params: { test: string; id: string } }) {
   const trigger = _triggers.find((t) => `${t.id}` === params.id);
+  const test = tests.find((t) => t.id === params.test);
 
   if (!trigger) {
     throw new Error("Invalid trigger id");
+  }
+  if (!test) {
+    throw new Error("Invalid test id");
   }
 
   return (
@@ -34,7 +39,7 @@ export default function Result({ params }: { params: { id: string } }) {
             <Link href={trigger.url} className="btn btn-purple" target="_blank" rel="noopener noreferrer">
               Watch the full video
             </Link>
-            <Link href="/preference" className="btn btn-purple-secondary">
+            <Link href={test.href} className="btn btn-purple-secondary">
               Play again
             </Link>
           </div>

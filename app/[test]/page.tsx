@@ -20,10 +20,10 @@ export default function Home({ params }: { params: { test: string } }) {
         <h1 className="text-2xl md:text-3xl font-light text-gray-200 text-center">{test.title} test</h1>
         <p className="text-gray-300 text-center text-sm sm:text-base">{test.descriptionLong}</p>
         <div className="flex flex-wrap justify-center gap-2.5">
-          <Link href="/preference/test" className="btn btn-purple">
+          <Link href={`${test.href}/test`} className="btn btn-purple">
             Start the test
           </Link>
-          <Link href="/preference/tutorial" className="btn btn-purple-secondary">
+          <Link href={`${test.href}/tutorial`} className="btn btn-purple-secondary">
             Tutorial
           </Link>
         </div>
