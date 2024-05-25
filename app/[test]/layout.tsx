@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: { test: string } },
 
   return {
     title: `${test.title} - Interactive ASMR`,
-    description: test.descriptionLong ?? test.description,
+    description: test.descriptionLong,
   };
 }
 
