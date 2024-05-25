@@ -1,10 +1,20 @@
 import React from "react";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
+import tests from "@/resources/tests";
 
-export const metadata: Metadata = {
-  title: "This or that - Interactive ASMR",
-  description: 'Website inspired by "this or that" test from YouTube video by @TiptoeTingles and @GibiASMR. This website allows you to try this test out by yourself.',
-};
+export async function generateMetadata({ params }: { params: { test: string } }, parent: ResolvingMetadata): Promise<Metadata> {
+  const testId = params.test;
+  const test = tests.find((t) => t.id === testId);
+
+  if (!test) {
+    throw new Error("Invalid test id");
+  }
+
+  return {
+    title: `${test.title} - Interactive ASMR`,
+    description: test.descriptionLong ?? test.description,
+  };
+}
 
 type Props = { children: React.ReactNode };
 

@@ -1,9 +1,19 @@
 import React from "react";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
+import tests from "@/resources/tests";
 
-export const metadata: Metadata = {
-  title: "Test | This or that - Interactive ASMR",
-};
+export async function generateMetadata({ params }: { params: { test: string } }, parent: ResolvingMetadata): Promise<Metadata> {
+  const testId = params.test;
+  const test = tests.find((t) => t.id === testId);
+
+  if (!test) {
+    throw new Error("Invalid test id");
+  }
+
+  return {
+    title: `Test | ${test.title} - Interactive ASMR`,
+  };
+}
 
 type Props = { children: React.ReactNode };
 
