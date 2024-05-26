@@ -24,8 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <GAWrapper />
-        <header className="absolute top-0 left-0 right-0 z-50 p-4 flex flex-row justify-center sm:justify-start">
-          <Link href="/" className="text-xl font-semibold tracking-tighter text-gray-300 select-none">
+        <header className="absolute top-0 left-0 right-0 z-50 p-4 flex flex-row justify-start">
+          <Link href="/" className="text-xl font-medium tracking-tighter text-gray-300 select-none">
             interactiveASMR
           </Link>
         </header>

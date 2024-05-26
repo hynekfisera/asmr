@@ -21,7 +21,15 @@ export default async function Test({ params }: { params: { test: string } }) {
     case "preference":
       return <Preference initialTriggers={triggers.slice(0, 8)} />;
     case "guess":
-      return <Guess trigger={triggersForGuessing[0]} options={triggersForGuessing.slice(0, 4).sort(() => Math.random() - 0.5)} />;
+      return (
+        <Guess
+          trigger={triggersForGuessing[0]}
+          options={triggersForGuessing
+            .filter((t, i) => !(i !== 0 && t.name === triggersForGuessing[0].name))
+            .slice(0, 4)
+            .sort(() => Math.random() - 0.5)}
+        />
+      );
     default:
       return <></>;
   }
