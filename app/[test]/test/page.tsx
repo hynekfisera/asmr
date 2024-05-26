@@ -5,7 +5,11 @@ import Guess from "./Guess";
 import { redirect } from "next/navigation";
 import triggers from "@/resources/triggers";
 
-export const dynamic = "force-dynamic";
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  return tests.filter((test) => !test.disabled).map((test) => ({ test: test.id }));
+}
 
 export default async function Test({ params }: { params: { test: string } }) {
   const test = tests.find((t) => t.id === params.test);
