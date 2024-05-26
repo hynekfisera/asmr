@@ -6,5 +6,6 @@ export type Trigger = {
   url: string;
   start: number;
   end: number;
+  noTalking: boolean;
   creatorId: CreatorId;
 };

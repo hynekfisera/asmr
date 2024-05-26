@@ -9,6 +9,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/hUL_JdnWdEw",
     start: 259,
     end: 280,
+    noTalking: false,
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/02xYGcihZCE",
     start: 1367,
     end: 1384,
+    noTalking: false,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/Jjai60__8TY",
     start: 856,
     end: 877,
+    noTalking: true,
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/8s2WrDhdS08",
     start: 1797,
     end: 1820,
+    noTalking: false,
   },
   {
     id: 5,
@@ -41,6 +45,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/yCATglIFf_I",
     start: 749,
     end: 768,
+    noTalking: false,
   },
   {
     id: 6,
@@ -49,6 +54,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/yCATglIFf_I",
     start: 1895,
     end: 1921,
+    noTalking: false,
   },
   {
     id: 7,
@@ -57,6 +63,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/HUlpQaAnDd0",
     start: 1286,
     end: 1311,
+    noTalking: false,
   },
   {
     id: 8,
@@ -65,6 +72,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/HUlpQaAnDd0",
     start: 1483,
     end: 1504,
+    noTalking: false,
   },
   {
     id: 9,
@@ -73,6 +81,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 445,
     end: 469,
+    noTalking: true,
   },
   {
     id: 10,
@@ -81,6 +90,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 668,
     end: 695,
+    noTalking: true,
   },
   {
     id: 11,
@@ -89,6 +99,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 854,
     end: 877,
+    noTalking: true,
   },
   {
     id: 12,
@@ -97,6 +108,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 929,
     end: 951,
+    noTalking: false,
   },
   {
     id: 13,
@@ -105,6 +117,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 1097,
     end: 1123,
+    noTalking: true,
   },
   {
     id: 14,
@@ -113,6 +126,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/3dfl5MBMsUE",
     start: 1431,
     end: 1454,
+    noTalking: true,
   },
   {
     id: 15,
@@ -121,6 +135,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 300,
     end: 325,
+    noTalking: true,
   },
   {
     id: 16,
@@ -129,6 +144,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 423,
     end: 453,
+    noTalking: false,
   },
   {
     id: 17,
@@ -137,6 +153,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 627,
     end: 650,
+    noTalking: true,
   },
   {
     id: 18,
@@ -145,6 +162,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 884,
     end: 910,
+    noTalking: false,
   },
   {
     id: 19,
@@ -153,6 +171,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/VD1i7XBQC6Q",
     start: 1030,
     end: 1048,
+    noTalking: true,
   },
   {
     id: 20,
@@ -161,6 +180,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/jgRq4SCwMwA",
     start: 1078,
     end: 1105,
+    noTalking: true,
   },
   {
     id: 21,
@@ -169,6 +189,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/jgRq4SCwMwA",
     start: 1243,
     end: 1265,
+    noTalking: true,
   },
   {
     id: 22,
@@ -177,6 +198,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/jgRq4SCwMwA",
     start: 1514,
     end: 1525,
+    noTalking: true,
   },
   {
     id: 23,
@@ -185,6 +207,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/fbW-ewvl9z0",
     start: 309,
     end: 332,
+    noTalking: false,
   },
   {
     id: 24,
@@ -193,6 +216,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/fbW-ewvl9z0",
     start: 1194,
     end: 1222,
+    noTalking: true,
   },
   {
     id: 25,
@@ -201,6 +225,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/t23YdznJ6-8",
     start: 484,
     end: 506,
+    noTalking: true,
   },
   {
     id: 26,
@@ -209,6 +234,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/t23YdznJ6-8",
     start: 1023,
     end: 1044,
+    noTalking: true,
   },
   {
     id: 27,
@@ -217,6 +243,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/t23YdznJ6-8",
     start: 1339,
     end: 1364,
+    noTalking: true,
   },
   {
     id: 28,
@@ -225,6 +252,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/t23YdznJ6-8",
     start: 1664,
     end: 1688,
+    noTalking: true,
   },
   {
     id: 29,
@@ -233,6 +261,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/02xYGcihZCE",
     start: 2733,
     end: 2756,
+    noTalking: false,
   },
   {
     id: 30,
@@ -241,6 +270,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/HUlpQaAnDd0",
     start: 433,
     end: 455,
+    noTalking: false,
   },
   {
     id: 31,
@@ -249,6 +279,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/-8BNDacMZUk",
     start: 701,
     end: 722,
+    noTalking: true,
   },
   {
     id: 32,
@@ -257,6 +288,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/-8BNDacMZUk",
     start: 1362,
     end: 1386,
+    noTalking: true,
   },
   {
     id: 33,
@@ -265,6 +297,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/m2u1C2Ko7K8",
     start: 528,
     end: 553,
+    noTalking: true,
   },
   {
     id: 34,
@@ -273,6 +306,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/m2u1C2Ko7K8",
     start: 1582,
     end: 1610,
+    noTalking: true,
   },
   {
     id: 35,
@@ -281,6 +315,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/m2u1C2Ko7K8",
     start: 2916,
     end: 2942,
+    noTalking: true,
   },
   {
     id: 36,
@@ -289,6 +324,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/dhQsq22QYKM",
     start: 1459,
     end: 1483,
+    noTalking: true,
   },
   {
     id: 37,
@@ -297,6 +333,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/ereUyeiKI5Y",
     start: 438,
     end: 472,
+    noTalking: false,
   },
   {
     id: 38,
@@ -305,6 +342,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/_fD9nfGjO_A",
     start: 967,
     end: 992,
+    noTalking: false,
   },
   {
     id: 39,
@@ -313,6 +351,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/_fD9nfGjO_A",
     start: 1149,
     end: 1168,
+    noTalking: true,
   },
   {
     id: 40,
@@ -321,6 +360,7 @@ const triggers: Trigger[] = [
     url: "https://youtu.be/_fD9nfGjO_A",
     start: 1475,
     end: 1502,
+    noTalking: true,
   },
 ];
 
