@@ -6,6 +6,7 @@ import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import fetchNewTriggers from "@/app/actions";
+import { useRouter } from "next/navigation";
 
 export default function Guess({ trigger, options }: { trigger: Trigger; options: Trigger[] }) {
   const [optionsVisible, setOptionsVisible] = useState(false);
@@ -14,6 +15,7 @@ export default function Guess({ trigger, options }: { trigger: Trigger; options:
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [played, setPlayed] = useState(0);
   const playerRef = useRef<ReactPlayer>(null);
+  const router = useRouter();
 
   const handleProgress = (progress: { playedSeconds: number }): void => {
     if (progress.playedSeconds > trigger.end) {
@@ -43,6 +45,10 @@ export default function Guess({ trigger, options }: { trigger: Trigger; options:
 
   const answerRevealed = chosenOption !== null;
 
+  if (answerRevealed) {
+    router.prefetch(`/guess/result/${trigger.id}`);
+  }
+
   useEffect(() => {
     setIsPlaying(false);
     setIsLoaded(true);
@@ -54,10 +60,10 @@ export default function Guess({ trigger, options }: { trigger: Trigger; options:
       <h1 className="text-3xl font-semibold text-gray-200 mb-2">
         <span className="text-purple-300">Guess</span> the <span className="text-purple-300">trigger</span>
       </h1>
-      <div className="mb-2 max-w-lg text-center text-xs text-gray-400">
+      <div className="mb-6 max-w-lg text-center text-xs text-gray-400">
         Click <strong className="font-semibold">Play</strong> and listen to the trigger. You may try to guess in your head first without seeing the options. Then click the <strong className="font-semibold">Show options</strong> button and choose which trigger you think it is.
       </div>
-      <div>
+      <div className="w-full max-w-sm">
         <div className="hidden">
           {isLoaded && (
             <ReactPlayer

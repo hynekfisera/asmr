@@ -4,6 +4,8 @@ import Link from "next/link";
 import { getCreatorById } from "@/utils/creator.functions";
 import Player from "./Player";
 import tests from "@/resources/tests";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export const dynamicParams = false;
 
@@ -46,7 +48,7 @@ export default function Result({ params }: { params: { test: string; id: string 
             {test.id === "preference" && (
               <>
                 <Link href={test.href} className="btn btn-purple">
-                  Play again
+                  Play again <FontAwesomeIcon icon={faChevronRight} />
                 </Link>
                 <Link href={trigger.url} className="btn btn-purple-secondary" target="_blank" rel="noopener noreferrer">
                   Watch the full video
@@ -56,7 +58,7 @@ export default function Result({ params }: { params: { test: string; id: string 
             {test.id === "guess" && (
               <>
                 <Link href="/guess/test" className="btn btn-purple">
-                  Next trigger
+                  Play again <FontAwesomeIcon icon={faChevronRight} />
                 </Link>
                 <Link href="/" className="btn btn-purple-secondary">
                   Back to home
