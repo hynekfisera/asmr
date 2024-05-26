@@ -3,7 +3,7 @@ import { Trigger } from "@/types/Trigger";
 import { getCreatorById } from "@/utils/creator.functions";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 
 type Props = {
   trigger: Trigger;

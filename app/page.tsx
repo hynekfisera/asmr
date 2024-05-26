@@ -7,7 +7,7 @@ import creators from "@/resources/creators";
 
 export default function Home() {
   return (
-    <main className="px-6 py-12">
+    <main className="px-6 py-12 md:py-24">
       <div className="max-w-3xl mx-auto flex flex-col gap-12 items-stretch">
         <section className="pt-12 md:pt-24 flex flex-col items-center gap-8 w-full">
           <div className="flex flex-col items-center gap-2">
@@ -37,9 +37,9 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
             {creators.map((creator) => (
-              <Link href={creator.url} key={creator.id} className="bg-slate-200/5 px-6 py-4 flex items-center gap-3 text-gray-300 font-medium hover:underline rounded-lg" target="_blank" rel="noopener noreferrer">
-                <Image src={creator.icon} alt={creator.name + " icon"} className="w-12 h-12 rounded-full" />
-                <div className="text-lg">{creator.name}</div>
+              <Link href={creator.url} key={creator.id} className="bg-slate-200/5 px-4 py-2 flex items-center gap-3 text-gray-300 font-medium hover:underline rounded-lg" target="_blank" rel="noopener noreferrer">
+                <Image src={creator.icon} alt={creator.name + " icon"} className="w-10 h-10 rounded-full" />
+                <div className="truncate">{creator.name}</div>
               </Link>
             ))}
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
               Just watching ASMR videos is wonderful, but I wanted to create something that replicates the experience of those real-life ASMR tests. Although it&apos;s not exactly the same, I believe this is as close as we can get using just online content. I hope you enjoy it!
             </p>
             <p className="text-sm text-gray-400">
-              All video material rights belong to their original creators. Clips are embedded directly from the original YouTube videos; no content is self-hosted. Since it is possible to disable the embed option in YouTube Studio, I assume that creators who enable it are okay with having their
+              All video material rights belong to their original creators. Clips are embedded directly from the original YouTube videos; no ASMR content is self-hosted. Since it is possible to disable the embed option in YouTube Studio, I assume that creators who enable it are okay with having their
               content here. If that&apos;s not the case, please feel free to reach out to me about content removal.
             </p>
           </div>

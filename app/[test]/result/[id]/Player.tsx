@@ -1,7 +1,7 @@
 "use client";
 import { Trigger } from "@/types/Trigger";
 import React, { useState, useEffect, useRef } from "react";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 
 type Props = {
   trigger: Trigger;

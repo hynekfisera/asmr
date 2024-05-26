@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 import { Trigger } from "@/types/Trigger";
 import Link from "next/link";
 import { getCreatorById } from "@/utils/creator.functions";
@@ -66,10 +66,8 @@ export default function Player({ trigger, left, altColor, onPick: handlePick }: 
             url={trigger.url}
             controls={false}
             config={{
-              youtube: {
-                playerVars: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
-                embedOptions: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
-              },
+              playerVars: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
+              embedOptions: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
             }}
             onProgress={handleProgress}
             onError={(e) => console.log(e)}

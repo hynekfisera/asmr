@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Trigger } from "@/types/Trigger";
 import Link from "next/link";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import fetchNewTriggers from "@/app/actions";
@@ -72,10 +72,8 @@ export default function Guess({ trigger, options }: { trigger: Trigger; options:
               url={trigger.url}
               controls={false}
               config={{
-                youtube: {
-                  playerVars: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
-                  embedOptions: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
-                },
+                playerVars: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
+                embedOptions: { controls: 0, disablekb: 1, fs: 0, modestbranding: 1, rel: 0, showinfo: 0 },
               }}
               onProgress={handleProgress}
               onError={(e) => console.log(e)}
