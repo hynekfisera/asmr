@@ -48,9 +48,9 @@ export default function Home() {
           <h2 className="text-xl font-semibold text-gray-200 tracking-tight">About This Project</h2>
           <div className="flex flex-col gap-4">
             <p className="text-gray-300 leading-relaxed">
-              This project was inspired by{" "}
+              This project was inspired by a video called{" "}
               <Link href="https://youtu.be/rlOQMh98S9w" className="link" target="_blank" rel="noopener noreferrer">
-                this video
+                Trying ASMR Tests
               </Link>{" "}
               by{" "}
               <Link href="https://www.youtube.com/@TiptoeTingles" className="link" target="_blank" rel="noopener noreferrer">
