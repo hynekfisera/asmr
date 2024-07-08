@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import tests from "@/resources/tests";
+import Heading from "@/components/headings/Heading";
 
 export const dynamicParams = false;
 
@@ -19,7 +20,7 @@ export default function Home({ params }: { params: { test: string } }) {
   return (
     <main className="flex flex-col justify-center items-center px-6 py-12 md:py-6">
       <div className="max-w-screen-md flex flex-col justify-center items-center gap-6">
-        <h1 className="text-2xl md:text-3xl font-light text-gray-200 text-center">{test.title} test</h1>
+        <Heading>{test.title} test</Heading>
         <p className="text-gray-300 text-center text-sm sm:text-base">{test.descriptionLong}</p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link href={`${test.href}/test`} className="btn btn-purple">

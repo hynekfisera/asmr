@@ -9,6 +9,7 @@
 }
 
 @layer components {
+  body,
   main {
     @apply min-h-screen w-full bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950;
   }

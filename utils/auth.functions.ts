@@ -10,7 +10,7 @@ export const login = async () => {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: getAppUrl() + "/auth/callback",
+      redirectTo: getAppUrl() + "/auth/callback?next=/account",
     },
   });
   if (data.url) {
