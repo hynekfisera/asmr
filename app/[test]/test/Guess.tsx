@@ -5,7 +5,6 @@ import Link from "next/link";
 import ReactPlayer from "react-player/youtube";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
-import fetchNewTriggers from "@/app/actions";
 import { useRouter } from "next/navigation";
 
 export default function Guess({ trigger, options }: { trigger: Trigger; options: Trigger[] }) {
@@ -115,9 +114,15 @@ export default function Guess({ trigger, options }: { trigger: Trigger; options:
         </div>
       </div>
       <div className={`mb-2 text-gray-100 font-medium ${answerRevealed ? "" : "invisible"}`}>{trigger.id === chosenOption?.id ? "You guessed correctly!" : "Better luck next time!"}</div>
-      <Link href={"/guess/result/" + trigger.id} onClick={() => fetchNewTriggers()} className={`btn btn-purple ${answerRevealed ? "" : "invisible"}`}>
+      <button
+        onClick={() => {
+          router.push(`/guess/result/${trigger.id}`);
+          router.refresh();
+        }}
+        className={`btn btn-purple ${answerRevealed ? "" : "invisible"}`}
+      >
         Continue <FontAwesomeIcon icon={faChevronRight} />
-      </Link>
+      </button>
     </main>
   );
 }

@@ -3,13 +3,22 @@ import React from "react";
 import Preference from "./Preference";
 import Guess from "./Guess";
 import { redirect } from "next/navigation";
-import triggers from "@/resources/triggers";
+import _triggers from "@/resources/triggers";
+import { Trigger } from "@/types/Trigger";
 
-export const dynamicParams = false;
+export const dynamic = "force-dynamic";
+
+export const revalidate = 0;
+
+/* export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return tests.filter((test) => !test.disabled).map((test) => ({ test: test.id }));
-}
+} */
+
+const randomizeTriggers = () => {
+  return _triggers.sort(() => Math.random() - 0.5);
+};
 
 export default async function Test({ params }: { params: { test: string } }) {
   const test = tests.find((t) => t.id === params.test);
@@ -18,13 +27,14 @@ export default async function Test({ params }: { params: { test: string } }) {
     redirect("/404");
   }
 
-  triggers.sort(() => Math.random() - 0.5);
-  const triggersForGuessing = triggers.filter((t) => t.noTalking);
+  const triggers = randomizeTriggers();
 
   switch (test.id) {
     case "preference":
-      return <Preference initialTriggers={triggers.slice(0, 8)} />;
+      const triggersForPreference = triggers.slice(0, 8);
+      return <Preference initialTriggers={triggersForPreference} />;
     case "guess":
+      const triggersForGuessing = triggers.filter((t) => t.noTalking);
       return (
         <Guess
           trigger={triggersForGuessing[0]}
