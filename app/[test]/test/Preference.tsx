@@ -41,7 +41,7 @@ export default function Preference({ initialTriggers }: { initialTriggers: Trigg
 
   return (
     <main className="flex flex-col justify-center items-center px-6 py-20 md:py-6">
-      <h1 className="text-3xl font-semibold text-gray-200 mb-0.5">
+      <h1 className="font-tight text-3xl font-semibold text-gray-200 mb-0.5">
         <span className={altColor ? "text-blue-300" : "text-pink-300"}>This</span> or <span className={altColor ? "text-purple-300" : "text-rose-300"}>that</span>
       </h1>
       <div className="mb-1 text-center text-sm text-gray-300">

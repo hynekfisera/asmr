@@ -11,8 +11,8 @@ export default function Home() {
       <div className="max-w-3xl mx-auto flex flex-col gap-12 items-stretch">
         <section className="pt-12 md:pt-24 flex flex-col items-center gap-8 w-full">
           <div className="flex flex-col items-center gap-2">
-            <h1 className="text-2xl md:text-3xl xl:text-4xl text-gray-200 text-center">Interactive ASMR</h1>
-            <div className="text-sm md:text-base text-purple-300 flex flex-wrap gap-1 text-center max-w-[250px] sm:max-w-none">Experience ASMR tests from the comfort of your home</div>
+            <h1 className="font-tight font-medium text-2xl md:text-3xl xl:text-4xl text-gray-200 text-center">Interactive ASMR</h1>
+            <div className="font-medium text-sm md:text-base text-purple-300 flex flex-wrap gap-1 text-center max-w-[250px] sm:max-w-none">Experience ASMR tests from the comfort of your home</div>
           </div>
           <div className="flex flex-wrap justify-center w-full max-w-3xl gap-6">
             {tests.map((test) => (
@@ -23,7 +23,7 @@ export default function Home() {
               >
                 <Image src={test.image} alt={"Icon representing the " + test.title + " test"} className="h-full max-h-10 sm:max-h-12 w-auto" />
                 <div className="flex flex-col py-2">
-                  <div className="text-gray-200 text-lg">{test.title}</div>
+                  <div className="font-tight font-medium text-gray-200 text-lg">{test.title}</div>
                   <div className="text-gray-400 text-sm">{test.description}</div>
                 </div>
               </Link>
@@ -32,7 +32,7 @@ export default function Home() {
         </section>
         <section className="w-full max-w-3xl flex flex-col gap-3">
           <div className="flex flex-col gap-1">
-            <h2 className="text-xl font-semibold text-gray-200 tracking-tight">Featured Creators</h2>
+            <h2 className="font-tight text-xl font-semibold text-gray-200">Featured Creators</h2>
             <p className="text-gray-300">Please support these ASMR creators by subscribing!</p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </section>
         <section className="w-full max-w-3xl flex flex-col gap-1.5">
-          <h2 className="text-xl font-semibold text-gray-200 tracking-tight">About This Project</h2>
+          <h2 className="font-tight text-xl font-semibold text-gray-200">About This Project</h2>
           <div className="flex flex-col gap-4">
             <p className="text-gray-300 leading-relaxed">
               This project was inspired by a video called{" "}

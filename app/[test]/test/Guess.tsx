@@ -55,7 +55,7 @@ export default function Guess({ trigger, options }: { trigger: Trigger; options:
 
   return (
     <main className="flex flex-col justify-center items-center px-6 py-20 md:py-6">
-      <h1 className="text-3xl font-semibold text-gray-200 mb-2">
+      <h1 className="font-tight text-3xl font-semibold text-gray-200 mb-2">
         <span className="text-purple-300">Guess</span> the <span className="text-purple-300">trigger</span>
       </h1>
       <div className="mb-6 max-w-lg text-center text-xs text-gray-400">

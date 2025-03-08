@@ -36,7 +36,7 @@ export default async function Result(props: { params: Promise<{ test: string; id
         <div className="flex flex-col items-center w-full gap-8">
           <div>
             <h1 className="text-lg sm:text-xl md:text-2xl text-center text-gray-200 mb-1">{test.resultMessage}</h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-purple-300 text-center">{trigger.name}</h2>
+            <h2 className="font-tight text-xl sm:text-2xl md:text-3xl font-semibold text-purple-300 text-center">{trigger.name}</h2>
             <h3 className="text-sm sm:text-base md:text-lg text-gray-100 text-center">
               by{" "}
               <Link href={getCreatorById(trigger.creatorId)!.url} className="hover:underline">
