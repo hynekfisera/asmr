@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Trigger } from "@/types/Trigger";
-import Link from "next/link";
 import ReactPlayer from "react-player/youtube";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -63,7 +62,7 @@ export default function Guess({ trigger, options }: { trigger: Trigger; options:
         Click <strong className="font-semibold">Play</strong> and listen to the trigger. You may try to guess in your head first without seeing the options. Then click the <strong className="font-semibold">Show options</strong> button and choose which trigger you think it is.
       </div>
       <div className="w-full max-w-sm">
-        <div className="hidden">
+        <div className="invisible h-[1px]">
           {isLoaded && (
             <ReactPlayer
               playing={isPlaying}

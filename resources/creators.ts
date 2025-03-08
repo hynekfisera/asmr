@@ -1,9 +1,9 @@
 import { Creator, CREATOR_ID } from "@/types/Creator";
-import Gibi from "/public/assets/creators/gibi.jpeg";
-import Darling from "/public/assets/creators/darling.jpeg";
-import LunaBloom from "/public/assets/creators/lunabloom.jpeg";
-import Tiptoe from "/public/assets/creators/tiptoe.jpeg";
-import Rebecca from "/public/assets/creators/rebecca.jpeg";
+import Gibi from "../public/assets/creators/gibi.jpeg";
+import Darling from "../public/assets/creators/darling.jpeg";
+import LunaBloom from "../public/assets/creators/lunabloom.jpeg";
+import Tiptoe from "../public/assets/creators/tiptoe.jpeg";
+import Rebecca from "../public/assets/creators/rebecca.jpeg";
 
 const creators: Creator[] = [
   {

@@ -1,7 +1,7 @@
 import { Test } from "@/types/Test";
-import Preference from "/public/assets/preference.svg";
-import Guess from "/public/assets/guess.svg";
-import Match from "/public/assets/match.svg";
+import Preference from "../public/assets/preference.svg";
+import Guess from "../public/assets/guess.svg";
+import Match from "../public/assets/match.svg";
 
 const tests: Test[] = [
   {

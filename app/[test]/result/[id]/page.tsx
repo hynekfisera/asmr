@@ -18,7 +18,8 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export default function Result({ params }: { params: { test: string; id: string } }) {
+export default async function Result(props: { params: Promise<{ test: string; id: string }> }) {
+  const params = await props.params;
   const trigger = _triggers.find((t) => `${t.id}` === params.id);
   const test = tests.find((t) => t.id === params.test);
 

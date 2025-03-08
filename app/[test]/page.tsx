@@ -9,7 +9,8 @@ export async function generateStaticParams() {
   return tests.filter((test) => !test.disabled).map((test) => ({ test: test.id }));
 }
 
-export default function Home({ params }: { params: { test: string } }) {
+export default async function Home(props: { params: Promise<{ test: string }> }) {
+  const params = await props.params;
   const test = tests.find((t) => t.id === params.test);
 
   if (!test) {

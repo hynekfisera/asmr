@@ -20,7 +20,8 @@ const randomizeTriggers = () => {
   return _triggers.sort(() => Math.random() - 0.5);
 };
 
-export default async function Test({ params }: { params: { test: string } }) {
+export default async function Test(props: { params: Promise<{ test: string }> }) {
+  const params = await props.params;
   const test = tests.find((t) => t.id === params.test);
 
   if (!test) {
